@@ -4,7 +4,7 @@ import { FaUser, FaUserPlus } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-    <nav className="container mx-auto  fixed top-0 left-0 right-0 z-10">
+    <nav className="container mx-auto  fixed top-0 left-0 right-0 z-30 bg-[#fdfdfd73] backdrop-blur-[20px]">
       <div className="flex justify-between items-center">
         <div className="logo-img h-[50%]">
           <img src={logo} alt="Logo" className="w-3/4 h-full object-contain" />
