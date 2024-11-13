@@ -1,0 +1,27 @@
+/* Keyframe animation for sliding the navbar */
+@keyframes slideDown {
+    0% {
+      top: -62px; /* Initially off-screen */
+    }
+    100% {
+      top: 0; /* Final position at the top */
+    }
+  }
+  
+  .sticky-navbar-nav {
+    position: fixed;
+    top: -62px; /* Initially off-screen */
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 200;
+    transition-duration: 500ms;
+    animation: slideDown 500ms ease-in-out forwards; /* Apply the slideDown animation */
+  }
+  
+  .sticky-navbar-middle {
+    background: #fdfdfd73;
+    /* background-color: black; */
+    backdrop-filter: blur(20px);
+  }
+  

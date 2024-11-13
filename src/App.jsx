@@ -10,10 +10,12 @@ import Course from './section/Course'
 import Blog from './section/Blog'
 import Achivement from './section/Achivement'
 import Footer from './components/footer'
+import Othernavbar from './components/Othernavbar'
 
 const App = () => {
   return (
     <div className=''>
+      {/* <Othernavbar/> */}
       <Navbar/>
       <Hero/>
       <Sponsor/>

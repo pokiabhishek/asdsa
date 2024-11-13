@@ -22,7 +22,7 @@ const catagoryList = [
 const Hero = () => {
   return (
     <section className="relative">
-      <div className="container mx-auto">
+      <div className=" w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto transition-all duration-500 ease-in-out">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center pt-40">
           {/* Left Section: Content */}
           <div className="banner-content">
@@ -67,11 +67,11 @@ const Hero = () => {
           {/* Right Section: Spinning Circles and Image */}
           <div className="relative">
             {/* Spinning Circles */}
-            <div className="absolute inset-0 z-10 w-[600px] h-[600px] overflow-hidden">
+            {/* <div className="absolute inset-0 z-10 w-[600px] h-[600px] overflow-hidden">
               <div className="absolute top-0 left-0 border-[2px] border-primary border-dotted w-full h-full rounded-full animate-spin-slow"></div>
               <div className="absolute top-[11%] left-[10%] border-[2px] border-secondary border-dotted w-[80%] h-[80%] rounded-full animate-spin-slow animation-delay-2000"></div>
               <div className="absolute top-[20%] left-[20%] border-[2px] border-slate-200 border-dotted w-[60%] h-[60%] rounded-full animate-spin-slow animation-delay-4000"></div>
-            </div>
+            </div> */}
 
             {/* Side Image */}
             <img
