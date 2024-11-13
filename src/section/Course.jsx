@@ -114,27 +114,32 @@ const courseList = [
 
 const Course = () => {
   const stars = new Array(5).fill(null);
-  const [hover,setHover] = useState(null);
-  const handlemouse = (index) => setHover(index)
+  const [hover, setHover] = useState(null);
+
+  const handleMouse = (index) => setHover(index);
+  const handleMouseLeave = () => setHover(null);
 
   return (
     <div className="py-12 bg-[#fff9f1]">
-      <div className="container mx-auto">
+      <div className="w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto transition-all duration-500 ease-in-out">
         <div className="text-center mb-12">
-          <span className="text-lg font-bold text-primary mb-2  uppercase tracking-widest">
+          <span className="text-sm md:text-lg font-bold text-primary mb-2 uppercase tracking-widest">
             {subTitle}
           </span>
-          <h2 className="text-5xl font-sans font-bold text-black tracking-tight">{title}</h2>
+          <h2 className="text-3xl md:text-5xl font-sans font-bold text-[#314ea2] tracking-tight">
+            {title}
+          </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {courseList.map((course, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg p-4 group transition-transform duration-300 ease-in-out transform  hover:shadow-lg cursor-pointer"
-              onMouseOver={() => handlemouse(index)}
+              className="bg-white shadow-lg p-4 group transition-transform duration-300 ease-in-out transform hover:shadow-lg cursor-pointer flex flex-col h-full"
+              onMouseOver={() => handleMouse(index)}
+              onMouseLeave={handleMouseLeave}
             >
-              <div className="relative">
+              <div className="relative flex-grow">
                 <div className="w-full h-48 overflow-hidden">
                   <img
                     className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110"
@@ -142,14 +147,15 @@ const Course = () => {
                     alt={course.imgAlt}
                   />
                 </div>
-                <span className="absolute text-xl font-sans font-semibold right-6 -bottom-5 bg-primary py-4 px-3 rounded-full tracking-wide text-white">
-                  $30
+                <span className="absolute text-sm md:text-xl font-sans font-semibold right-6 -bottom-5 bg-primary py-4 px-3 rounded-full tracking-wide text-white">
+                  {course.price}
                 </span>
               </div>
-              <div className="p-6">
-                <div className="flex mb-4 justify-between items-center">
+
+              <div className="p-2 md:p-6 flex-grow">
+                <div className="flex mb-4 justify-between items-center pt-3">
                   <span
-                    className="text-sm text-white px-3 py-2 rounded-md"
+                    className="text-[10px] md:text-sm text-white px-3 py-2 rounded-md"
                     style={{ backgroundColor: course.color }}
                   >
                     {course.cate}
@@ -163,44 +169,41 @@ const Course = () => {
                     {course.reviewCount}
                   </span>
                 </div>
-                <h1 className={`text-[26px] font-bold text-black mb-2 line-clamp-3 tracking-tighter duration-300 ${hover === index ? "text-primary" : "hover:text-primary"}`}>
+                <h1
+                  className={`text-lg md:text-[26px] font-bold mb-2 line-clamp-3 tracking-tighter duration-300 ${
+                    hover === index ? "text-primary" : "text-[#314ea2]"
+                  }`}
+                >
                   {course.title}
                 </h1>
                 <div className="text-sm text-gray-500 mb-4 flex justify-between">
-                  <span className="flex items-center gap-2 text-lg">
-                    <MdOutlineOndemandVideo className="text-xl text-primary font-semibold" />{" "}
+                  <span className="flex items-center gap-2 md:text-lg">
+                    <MdOutlineOndemandVideo className="text-xl text-primary font-semibold" />
                     {course.totalLeson}
                   </span>
-                  <span className="flex items-center gap-2 text-lg">
-                    <MdOnlinePrediction className="text-xl text-primary" />{" "}
+                  <span className="flex items-center gap-2 md:text-lg">
+                    <MdOnlinePrediction className="text-xl text-primary" />
                     {course.schdule}
                   </span>
                 </div>
-                <div className="flex justify-between items-center border-t-[1px] pt-2">
-                  <div className="flex items-center">
-                    <img
-                      className="w-8 h-8 rounded-full object-cover mr-2"
-                      src={course.authorImgUrl}
-                      alt={course.authorImgAlt}
-                    />
-                    <span className="text-lg text-black font-semibold">
-                      {course.authorName}
-                    </span>
-                  </div>
-                  <span className="text-lg font-semibold text-black flex items-center gap-2">
-                    {course.btnText}{" "}
-                    <FaExternalLinkAlt className="text-primary" />
+              </div>
+
+              {/* Author and Button Section */}
+              <div className="flex justify-between items-center border-t-[1px] pt-2">
+                <div className="flex items-center">
+                  <img
+                    className="w-8 h-8 rounded-full object-cover mr-2"
+                    src={course.authorImgUrl}
+                    alt={course.authorImgAlt}
+                  />
+                  <span className="md:text-lg text-[#314ea2] font-semibold">
+                    {course.authorName}
                   </span>
                 </div>
-                {/* Uncomment below button if needed */}
-                {/* <div className="text-center mt-4">
-                  <a
-                    href="#"
-                    className="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors duration-300"
-                  >
-                    {course.btnText}
-                  </a>
-                </div> */}
+                <span className="md:text-lg font-semibold text-[#314ea2] flex items-center gap-2">
+                  {course.btnText}
+                  <FaExternalLinkAlt className="text-primary" />
+                </span>
               </div>
             </div>
           ))}

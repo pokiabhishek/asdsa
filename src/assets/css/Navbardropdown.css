@@ -1,0 +1,171 @@
+/* Keyframes for slide-down animation */
+@keyframes slideDown {
+  0% {
+    top: -62px; /* Initially off-screen */
+  }
+  100% {
+    top: 0; /* Final position at the top */
+  }
+}
+
+/* Sticky navbar when scrolling */
+.sticky-navbar {
+  position: fixed;
+  top: -62px; /* Initially off-screen */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1050; /* Ensure it's above the mobile menu */
+  transition-duration: 500ms;
+  animation: slideDown 500ms ease-in-out forwards; /* Add the slide-down animation */
+  background: #fff; /* White background when sticky */
+  transition: background-color 0.5s ease;
+}
+
+/* Header when sticky */
+.sticky-navbar-middle {
+  background: #fff;
+}
+
+/* Transition for changing background color on scroll */
+.header-section {
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile Menu (Offcanvas) */
+.offcanvas-menu {
+  position: fixed;
+  top: 0;
+  right: 0; /* Positioned on the right */
+  bottom: 0;
+  background-color: white;
+  z-index: 100;
+  transform: translateX(100%); /* Initially off-screen */
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-menu.open {
+  transform: translateX(0); /* Slide in when open */
+}
+
+/* Overlay style to cover the screen */
+.offcanvas-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.2); Semi-transparent black */
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.offcanvas-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #314ea2;
+  position: relative;
+  font-size: 18px;
+  perspective: 1000px;
+  z-index: 100;
+}
+.dropdown:hover {
+  /* background: #2980b9; */
+  cursor: pointer;
+}
+.dropdown:hover .dropdown_menu li {
+  display: block;
+}
+.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  perspective: 1000px;
+  z-index: -1;
+}
+
+.dropdown_menu li {
+  display: none;
+  color: #fff;
+  background-color: #314ea2;
+  padding: 10px 20px;
+  font-size: 16px;
+  opacity: 0;
+}
+.dropdown_menu li:hover {
+  background-color: #7ab2e0;
+  transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1) ;
+}
+.dropdown:hover .dropdown_menu--animated {
+  display: block;
+}
+.dropdown_menu--animated {
+  display: none;
+}
+.dropdown_menu--animated li {
+  display: block;
+  opacity: 1;
+}
+.dropdown_menu-6 {
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.dropdown_menu-7 {
+  animation: rotateMenu 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@-moz-keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@-o-keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

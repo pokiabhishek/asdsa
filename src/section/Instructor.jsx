@@ -48,12 +48,12 @@ const instructorList = [
 const Instructor = () => {
   return (
     <div className="py-20 bg-[#fff9f1]">
-      <div className="container mx-auto">
+      <div className=" w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto transition-all duration-500 ease-in-out">
         <div className="text-center mb-16">
-          <span className="text-primary text-lg font-semibold uppercase font-sans">
+          <span className="text-primary md:text-lg font-semibold uppercase font-sans">
             {subTitle}
           </span>
-          <h2 className="text-3xl md:text-4xl font-semibold mt-2 font-sans">
+          <h2 className="text-3xl md:text-4xl font-semibold mt-2 font-sans text-[#314ea2]">
             {title}
           </h2>
         </div>
@@ -73,7 +73,7 @@ const Instructor = () => {
                 </div>
                 <div className="text-center">
                   <a to="/team-single">
-                    <h4 className="text-2xl font-semibold text-gray-800 font-sans hover:text-primary duration-300 ease-out">
+                    <h4 className="text-2xl font-semibold text-[#314ea2] cursor-pointer font-sans hover:text-primary duration-300 ease-out">
                       {val.name}
                     </h4>
                   </a>

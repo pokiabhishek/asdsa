@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { BsSendArrowDownFill } from "react-icons/bs";
 
 const newsTitle = "Want Us To Email You About Special Offers And Updates?";
 const siteTitle = "Site Map";
@@ -43,50 +43,42 @@ const Footer = () => {
   return (
     <div>
       {/* News Letter Section */}
-      <div className="relative bg-gray-800 text-white py-16 px-4">
-        <div
-          className="absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('/assets/images/shape-img/03.png')` }}
-        ></div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-40"></div>
-
-        <div className="container mx-auto relative z-10 text-center flex justify-between">
-          <h3 className="text-3xl font-semibold mb-4 w-[50%]">{newsTitle}</h3>
-          <form
-            action="/"
-            className="flex justify-center items-center space-x-4"
-          >
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Your Email"
-              className="p-3 rounded-lg text-black focus:outline-none w-96"
-            />
-            <input
+      <div className="bg-[#212529] text-white py-16 px-4">
+        <div className="w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto text-center flex flex-col md:flex-row justify-between gap-3">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4 w-full md:w-1/2 text-left">
+            {newsTitle}
+          </h3>
+          <form action="/" className="flex flex-col md:flex-row items-center py-3 w-full md:w-1/2">
+            <div className="relative flex items-center py-3 w-full md:w-[350px]">
+              <BsSendArrowDownFill className="absolute left-1 text-green-600" />
+              <input
+                type="text"
+                placeholder="Keywords of your course"
+                className="text-[12px] md:text-base p-4 pl-7 w-full focus:outline-none shadow-xl text-black rounded-full"
+              />
+            </div>
+            <button
               type="submit"
-              name="submit"
-              value="Subscribe Now"
-              className="bg-primary text-white px-6 py-3 rounded-lg cursor-pointer"
-            />
+              className="bg-primary text-[10px] md:text-[13px] py-4 rounded-full md:px-4 md:py-5 text-white font-semibold tracking-wide w-full md:w-auto mt-3 md:mt-0 md:ml-3"
+            >
+              Subscribe Now
+            </button>
           </form>
         </div>
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-gray-800 text-white py-16">
-        <div className="container mx-auto">
+      <footer className="bg-[#212529] text-white py-16">
+        <div className="w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Site Map */}
             <div>
-              <h4 className="font-semibold text-xl pb-2">{siteTitle}</h4>
-               <hr className="w-[25%]"/> 
+              <h4 className="font-semibold text-2xl pb-2">{siteTitle}</h4>
+              <hr className="w-[25%] border-t-2 border-green-400" />
               <ul className="space-y-2">
                 {siteList.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.link}
-                      className="hover:text-primary transition-colors"
-                    >
+                    <a href={item.link} className="hover:text-primary transition-colors">
                       {item.text}
                     </a>
                   </li>
@@ -96,15 +88,12 @@ const Footer = () => {
 
             {/* Useful Links */}
             <div>
-              <h4 className="font-semibold text-xl mb-4">{useTitle}</h4>
-              <hr className="w-[25%]"/> 
+              <h4 className="font-semibold text-2xl mb-4">{useTitle}</h4>
+              <hr className="w-[25%] border-t-2 border-green-400" />
               <ul className="space-y-2">
                 {useList.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.link}
-                      className="hover:text-primary transition-colors"
-                    >
+                    <a href={item.link} className="hover:text-primary transition-colors">
                       {item.text}
                     </a>
                   </li>
@@ -114,15 +103,12 @@ const Footer = () => {
 
             {/* Social Contact */}
             <div>
-              <h4 className="font-semibold text-xl mb-4">{socialTitle}</h4>
-              <hr className="w-[25%]"/> 
+              <h4 className="font-semibold text-2xl mb-4">{socialTitle}</h4>
+              <hr className="w-[25%] border-t-2 border-green-400" />
               <ul className="space-y-2">
                 {socialList.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.link}
-                      className="hover:text-primary transition-colors"
-                    >
+                    <a href={item.link} className="hover:text-primary transition-colors">
                       {item.text}
                     </a>
                   </li>
@@ -132,15 +118,12 @@ const Footer = () => {
 
             {/* Our Support */}
             <div>
-              <h4 className="font-semibold text-xl mb-4">{supportTitle}</h4>
-              <hr className="w-[25%]"/> 
+              <h4 className="font-semibold text-2xl mb-4">{supportTitle}</h4>
+              <hr className="w-[25%] border-t-2 border-green-400" />
               <ul className="space-y-2">
                 {supportList.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.link}
-                      className="hover:text-primary transition-colors"
-                    >
+                    <a href={item.link} className="hover:text-primary transition-colors">
                       {item.text}
                     </a>
                   </li>
@@ -152,11 +135,11 @@ const Footer = () => {
       </footer>
 
       {/* Footer Bottom */}
-      <div className="bg-gray-900 text-gray-400 py-4">
+      <div className="bg-white text-sm md:text-lg text-black py-4 font-semibold tracking-wider">
         <div className="container mx-auto text-center">
           <p>
             &copy; 2022{" "}
-            <a to="/" className="text-white">
+            <a to="/" className="text-gray-600">
               Edukon
             </a>{" "}
             Designed by

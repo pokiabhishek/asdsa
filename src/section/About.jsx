@@ -32,8 +32,8 @@ const aboutList = [
 
 const About = () => {
   return (
-    <div className="pt-28">
-      <div className="container mx-auto px-4">
+    <div className="pt-28 pb-8">
+      <div className=" w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto transition-all duration-500 ease-in-out">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Image Section */}
           <div className="flex flex-col justify-between pt-11">
@@ -50,7 +50,7 @@ const About = () => {
             <h4 className="text-lg uppercase font-sans font-semibold tracking-wider text-primary">
               {subTitle}
             </h4>
-            <h1 className="text-3xl lg:text-3xl xl:text-4xl font-extrabold leading-10 mt-4 w-[95%]">
+            <h1 className="text-3xl lg:text-3xl xl:text-4xl font-extrabold leading-10 mt-4 w-[95%] text-[#314ea2]">
               {title}
             </h1>
             <p className="text-gray-500 text-lg mt-4 w-[90%]">
@@ -67,7 +67,7 @@ const About = () => {
                     className="w-16 h-16 rounded-full object-cover"
                   />
                   <div>
-                    <h2 className="text-xl font-semibold text-black">{item.title}</h2>
+                    <h2 className="text-xl font-semibold text-[#314ea2]">{item.title}</h2>
                     <p className="text-lg text-gray-500 mt-2">{item.desc}</p>
                   </div>
                 </div>

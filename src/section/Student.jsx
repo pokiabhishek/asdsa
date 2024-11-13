@@ -42,12 +42,12 @@ const Rating = () => {
 const Student = () => {
   return (
     <div className="py-16 bg-gray-50 relative">
-      <div className="container mx-auto px-4">
+      <div className=" w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto transition-all duration-500 ease-in-out">
         <div className="text-center mb-12 relative z-20">
-          <span className="text-lg text-primary uppercase font-semibold tracking-wide">
+          <span className="text-sm md:text-lg text-primary uppercase font-semibold tracking-wide">
             {subTitle}
           </span>
-          <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#314ea2]">{title}</h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
@@ -76,23 +76,23 @@ const Student = () => {
                       <img
                         src={val.imgUrl}
                         alt={val.imgAlt}
-                        className="w-16 h-16 rounded-full"
+                        className="md:w-16 md:h-16 rounded-full"
                       />
                     </div>
                     <div>
                       <a to="/team-single">
-                        <h6 className="text-lg font-semibold text-gray-800">
+                        <h6 className="md:text-lg font-semibold text-[#314ea2]">
                           {val.name}
                         </h6>
                       </a>
-                      <span className="text-gray-500">{val.degi}</span>
+                      <span className="text-gray-500 text-sm">{val.degi}</span>
                     </div>
                   </div>
                   <div>
                     <Rating />
                   </div>
                 </div>
-                <p className="text-gray-600 text-lg tracking-tight">{val.desc}</p>
+                <p className="text-gray-600 text-sm leading-5 md:text-lg tracking-tight ">{val.desc}</p>
               </div>
             ))}
           </div>

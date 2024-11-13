@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 
 const subTitle = "Online education";
 const title = (
-  <h2 className="text-7xl font-semibold font-sans">
+  <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold font-sans text-[#314ea2]">
     <span className="d-lg-block">Learn The</span> Skills You Need{" "}
     <span className="d-lg-block">To Succeed</span>
   </h2>
@@ -26,23 +26,23 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center pt-40">
           {/* Left Section: Content */}
           <div className="banner-content">
-            <h6 className="text-primary text-uppercase text-2xl tracking-widest font-sans font-bold">
+            <h6 className="text-primary text-uppercase text-2xl tracking-widest font-sans font-bold py-3">
               {subTitle}
             </h6>
             <h1>{title}</h1>
-            <p className="desc text-lg text-gray-700">{desc}</p>
-            <form action="/" className="flex items-center">
-              <div className="relative flex items-center flex-grow">
+            <p className="desc text-sm md:text-lg text-gray-700 leading-6 py-3">{desc}</p>
+            <form action="/" className="flex items-center py-3">
+              <div className="relative flex items-center py-3 w-[150px] sm:w-[270px] md:w-[350px] lg:flex-grow">
                 <IoSearch className="absolute left-2 text-gray-500" />
                 <input
                   type="text"
                   placeholder="Keywords of your course"
-                  className="pl-9 p-5 focus:outline-none w-full shadow-xl"
+                  className="pl-9 p-2 text-sm md:p-5 focus:outline-none w-full shadow-xl"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-primary px-4 py-5 text-white font-semibold tracking-wide"
+                className="bg-primary text-[10px] font-thin tracking-tighter px-2 py-[10px] md:px-4 md:py-5 text-white font-semibold tracking-wide"
               >
                 Search Course
               </button>

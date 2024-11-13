@@ -71,7 +71,7 @@ const Sponsor = () => {
 
   return (
     <div className="bg-[#fff9f1] py-12">
-      <div className="container mx-auto">
+      <div className=" w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto transition-all duration-500 ease-in-out">
         <Slider {...settings}>
           {sponsorList.map((item, i) => (
             <div key={i} className="">

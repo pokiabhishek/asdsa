@@ -36,11 +36,11 @@ const achieveList = [
 const Achivement = () => {
     return (
         <div className="pt-28 pb-16 bg-gray-100"  style={{ backgroundImage: `url(${bg})` }}>
-            <div className="container mx-auto px-4">
+            <div className=" w-[85%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[85%] mx-auto transition-all duration-500 ease-in-out">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <span className="text-lg font-semibold text-primary">{subTitle}</span>
-                    <h2 className="text-4xl font-bold text-black mt-2">{title}</h2>
+                    <span className="text-sm md:text-lg font-semibold text-primary">{subTitle}</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#314ea2] mt-2">{title}</h2>
                 </div>
 
                 {/* Achievement List */}
@@ -48,7 +48,7 @@ const Achivement = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center">
                         {achievementList.map((val, i) => (
                             <div className="p-6 text-center" key={i}>
-                                <h2 className="text-4xl font-bold text-black">
+                                <h2 className="text-4xl font-bold text-[#314ea2]">
                                     <span className="count">
                                         <CountUp end={parseInt(val.count)} />+
                                     </span>
@@ -64,14 +64,14 @@ const Achivement = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {achieveList.map((val, i) => (
                             <div className="bg-white shadow-lg rounded-lg overflow-hidden" key={i}>
-                                <div className="flex items-center p-10 relative">
+                                <div className="flex items-center md:p-10 relative">
                                     <div className="absolute -right-24 ">
-                                        <img src={val.imgUrl} alt={val.imgAlt} className=" pt-20" />
+                                        <img src={val.imgUrl} alt={val.imgAlt} className="pt-20" />
                                     </div>
-                                    <div className="ml-6 w-[60%]">
-                                        <h4 className="text-2xl font-bold text-black">{val.title}</h4>
-                                        <p className="text-gray-600 mt-2 text-lg tracking-normal">{val.desc}</p>
-                                        <a href={val.siteLink} className="text-primary font-semibold mt-4 inline-block tracking-wider">{val.btnText}</a>
+                                    <div className="ml-6 w-[60%] z-30">
+                                        <h4 className="text-xl md:text-2xl font-bold text-[#314ea2]">{val.title}</h4>
+                                        <p className="text-gray-600 mt-2 text-sm md:text-lg tracking-normal">{val.desc}</p>
+                                        <a href={val.siteLink} className="text-sm text-primary font-semibold mt-4 inline-block tracking-wider">{val.btnText}</a>
                                     </div>
                                 </div>
                             </div>
