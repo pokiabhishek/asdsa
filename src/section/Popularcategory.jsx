@@ -8,48 +8,49 @@ import icon5 from "../assets/imges/Category/icon/05.jpg";
 import icon6 from "../assets/imges/Category/icon/06.jpg";
 
 const subTitle = "Popular Category";
-const title = "Popular Category For Learn";
+const title = "Popular Category To Learn";
 const btnText = "Browse All Categories";
 
 // List of category items
 const categoryList = [
   {
-    imgUrl: icon1,
+    imgUrl: icon5,
     imgAlt: "category rajibraj91 rajibraj",
-    title: "Computer Science",
-    count: "24 Course",
-  },
-  {
-    imgUrl: icon2,
-    imgAlt: "category rajibraj91 rajibraj",
-    title: "Civil Engineering",
-    count: "04 Course",
-  },
-  {
-    imgUrl: icon3,
-    imgAlt: "category rajibraj91 rajibraj",
-    title: "Business Analysis",
-    count: "27 Course",
+    title: "Deep Learning",
+    count: "78 Leacture",
   },
   {
     imgUrl: icon4,
     imgAlt: "category rajibraj91 rajibraj",
-    title: "Data Science Analytics",
-    count: "28 Course",
+    title: "React.js",
+    count: "28 Leacture",
   },
   {
-    imgUrl: icon5,
+    imgUrl: icon3,
     imgAlt: "category rajibraj91 rajibraj",
-    title: "Learning Management",
-    count: "78 Course",
+    title: "AI & ML",
+    count: "27 Leacture",
+  },
+  {
+    imgUrl: icon1,
+    imgAlt: "category rajibraj91 rajibraj",
+    title: "Data Science",
+    count: "24 Leacture",
+  },
+  {
+    imgUrl: icon2,
+    imgAlt: "category rajibraj91 rajibraj",
+    title: "Python",
+    count: "04 Leacture",
   },
   {
     imgUrl: icon6,
     imgAlt: "category rajibraj91 rajibraj",
-    title: "Computer Engineering",
-    count: "38 Course",
+    title: "Web Development",
+    count: "38 Leacture",
   },
 ];
+
 
 // List of colors
 const categoryColors = [
@@ -88,7 +89,7 @@ const Popularcategory = () => {
               onMouseLeave={handleMouseLeave}
             >
               <div
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col justify-between"
               >
                 <div className="category-thumb mb-4">
                   <img

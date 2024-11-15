@@ -5,12 +5,8 @@ import img3 from "../assets/imges/course/03.jpg";
 import img4 from "../assets/imges/course/04.jpg";
 import img5 from "../assets/imges/course/05.jpg";
 import img6 from "../assets/imges/course/06.jpg";
-import auth1 from "../assets/imges/course/author/01.jpg";
-import auth2 from "../assets/imges/course/author/02.jpg";
-import auth3 from "../assets/imges/course/author/03.jpg";
-import auth4 from "../assets/imges/course/author/04.jpg";
-import auth5 from "../assets/imges/course/author/05.jpg";
-import auth6 from "../assets/imges/course/author/06.jpg";
+import logo from "../assets/imges/REAL_TUTORIAL_HUB.png";
+
 import { FaStar } from "react-icons/fa";
 import { MdOutlineOndemandVideo } from "react-icons/md";
 import { MdOnlinePrediction } from "react-icons/md";
@@ -24,14 +20,14 @@ const courseList = [
     imgUrl: img1,
     imgAlt: "course rajibraj91 rajibraj",
     price: "$30",
-    cate: "Adobe XD",
+    cate: "feature",
     reviewCount: "03 reviews",
-    title: "Fundamentals of Adobe XD Theory Learn New",
-    totalLeson: "18x Lesson",
-    schdule: "Online Class",
-    authorImgUrl: auth1,
+    title: "Programming in C",
+    totalLeson: "18x Leacture",
+    schdule: "Online Tutorial",
+    authorImgUrl: logo,
     authorImgAlt: "course author rajibraj91 rajibraj",
-    authorName: "William Smith",
+    authorName: "RTH",
     btnText: "Read More",
     color: "#f16126", // Unique color for this course
   },
@@ -39,14 +35,14 @@ const courseList = [
     imgUrl: img2,
     imgAlt: "course rajibraj91 rajibraj",
     price: "$30",
-    cate: "Adobe XD",
+    cate: "feature",
     reviewCount: "03 reviews",
-    title: "Certified Graphic Design with Free Project Course",
-    totalLeson: "18x Lesson",
-    schdule: "Online Class",
-    authorImgUrl: auth2,
+    title: "Programming in C++",
+    totalLeson: "18x Leacture",
+    schdule: "Online Tutorial",
+    authorImgUrl: logo,
     authorImgAlt: "course author rajibraj91 rajibraj",
-    authorName: "Lora Smith",
+    authorName: "RTH",
     btnText: "Read More",
     color: "#00a556", // Unique color for this course
   },
@@ -54,14 +50,14 @@ const courseList = [
     imgUrl: img3,
     imgAlt: "course rajibraj91 rajibraj",
     price: "$30",
-    cate: "Adobe XD",
+    cate: "feature",
     reviewCount: "03 reviews",
-    title: "Theory Learn New Student And Fundamentals",
-    totalLeson: "18x Lesson",
-    schdule: "Online Class",
-    authorImgUrl: auth3,
+    title: "Basic Python",
+    totalLeson: "18x Leacture",
+    schdule: "Online Tutorial",
+    authorImgUrl: logo,
     authorImgAlt: "course author rajibraj91 rajibraj",
-    authorName: "Robot Smith",
+    authorName: "RTH",
     btnText: "Read More",
     color: "#eec93d", // Unique color for this course
   },
@@ -69,14 +65,14 @@ const courseList = [
     imgUrl: img4,
     imgAlt: "course rajibraj91 rajibraj",
     price: "$30",
-    cate: "Adobe XD",
+    cate: "feature",
     reviewCount: "03 reviews",
-    title: "Computer Fundamentals Basic Startup Ultricies Vitae",
-    totalLeson: "18x Lesson",
-    schdule: "Online Class",
-    authorImgUrl: auth4,
+    title: "Website Design",
+    totalLeson: "18x Leacture",
+    schdule: "Online Tutorial",
+    authorImgUrl: logo,
     authorImgAlt: "course author rajibraj91 rajibraj",
-    authorName: "Zinat Zaara",
+    authorName: "RTH",
     btnText: "Read More",
     color: "#cf9fb7", // Unique color for this course
   },
@@ -84,14 +80,14 @@ const courseList = [
     imgUrl: img5,
     imgAlt: "course rajibraj91 rajibraj",
     price: "$30",
-    cate: "Adobe XD",
+    cate: "feature",
     reviewCount: "03 reviews",
-    title: "Boozy Halloween Drinks for the Grown Eleifend Kuismod",
-    totalLeson: "18x Lesson",
-    schdule: "Online Class",
-    authorImgUrl: auth5,
+    title: "Programming in C#",
+    totalLeson: "18x Leacture",
+    schdule: "Online Tutorial",
+    authorImgUrl: logo,
     authorImgAlt: "course author rajibraj91 rajibraj",
-    authorName: "Rajib Raj",
+    authorName: "RTH",
     btnText: "Read More",
     color: "#31aabd", // Unique color for this course
   },
@@ -99,14 +95,14 @@ const courseList = [
     imgUrl: img6,
     imgAlt: "course rajibraj91 rajibraj",
     price: "$30",
-    cate: "Adobe XD",
+    cate: "feature",
     reviewCount: "03 reviews",
-    title: "Student Want to Learn About Science And Arts",
-    totalLeson: "18x Lesson",
-    schdule: "Online Class",
-    authorImgUrl: auth6,
+    title: "SQL",
+    totalLeson: "18x Leacture",
+    schdule: "Online Tutorial",
+    authorImgUrl: logo,
     authorImgAlt: "course author rajibraj91 rajibraj",
-    authorName: "Angel Mili",
+    authorName: "RTH",
     btnText: "Read More",
     color: "#f79a3d", // Unique color for this course
   },
@@ -152,12 +148,13 @@ const Course = () => {
                 </span>
               </div>
 
-              <div className="p-2 md:p-6 flex-grow">
+              <div className="p-2 md:p-4 flex-grow">
                 <div className="flex mb-4 justify-between items-center pt-3">
                   <span
-                    className="text-[10px] md:text-sm text-white px-3 py-2 rounded-md"
+                    className="text-[10px] md:text-[12px] text-white  rounded-md uppercase font-semibold tracking-wider flex items-center p-2 gap-2"
                     style={{ backgroundColor: course.color }}
                   >
+                    <FaStar className="text-white" />
                     {course.cate}
                   </span>
                   <div className="flex">
@@ -170,18 +167,18 @@ const Course = () => {
                   </span>
                 </div>
                 <h1
-                  className={`text-lg md:text-[26px] font-bold mb-2 line-clamp-3 tracking-tighter duration-300 ${
+                  className={`text-lg md:text-[26px] font-bold mb-2 line-clamp-3 tracking-wider duration-300 ${
                     hover === index ? "text-primary" : "text-[#314ea2]"
                   }`}
                 >
                   {course.title}
                 </h1>
                 <div className="text-sm text-gray-500 mb-4 flex justify-between">
-                  <span className="flex items-center gap-2 md:text-lg">
+                  <span className="flex items-center gap-2 md:text-md">
                     <MdOutlineOndemandVideo className="text-xl text-primary font-semibold" />
                     {course.totalLeson}
                   </span>
-                  <span className="flex items-center gap-2 md:text-lg">
+                  <span className="flex items-center gap-2 md:text-md">
                     <MdOnlinePrediction className="text-xl text-primary" />
                     {course.schdule}
                   </span>
@@ -192,11 +189,11 @@ const Course = () => {
               <div className="flex justify-between items-center border-t-[1px] pt-2">
                 <div className="flex items-center">
                   <img
-                    className="w-8 h-8 rounded-full object-cover mr-2"
+                    className="w-24 h-10  object-contain mr-2"
                     src={course.authorImgUrl}
                     alt={course.authorImgAlt}
                   />
-                  <span className="md:text-lg text-[#314ea2] font-semibold">
+                  <span className="md:text-md text-[#314ea2] font-semibold">
                     {course.authorName}
                   </span>
                 </div>

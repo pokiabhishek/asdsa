@@ -89,7 +89,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 150px;
+  top: 40px;
+  width: 250px;
   perspective: 1000px;
   z-index: -1;
 }

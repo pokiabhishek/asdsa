@@ -18,7 +18,7 @@ const App = () => {
       {/* <Othernavbar/> */}
       <Navbar/>
       <Hero/>
-      <Sponsor/>
+      {/* <Sponsor/> */}
       <Popularcategory/>
       <Course/>
       <About/>

@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleUp, FaUser, FaUserPlus } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../assets/imges/REAL_TUTORIAL_HUB.png"; // Update with the correct logo path
-import "../assets/css/Navbardropdown.css"; // Ensure the CSS is properly imported for animation
+import logo from "../assets/imges/REAL_TUTORIAL_HUB.png";
+import "../assets/css/Navbardropdown.css";
 import { FaAngleDown } from "react-icons/fa";
 
 
 
 const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
-  const [isSticky, setIsSticky] = useState(false); // Track scroll position
-  const [activeDropdown, setActiveDropdown] = useState(null); // Track which dropdown is active on mobile
+  const [isSticky, setIsSticky] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null); 
 
-  // Handle scroll event to make the navbar sticky
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 170) { // Change threshold to 200px
-        setIsSticky(true);  // Change to white when scrolling more than 200px
+      if (window.scrollY > 200) { 
+        setIsSticky(true); 
       } else {
-        setIsSticky(false); // Keep transparent when less than 200px
+        setIsSticky(false); 
       }
     };
 
@@ -50,19 +50,14 @@ const Header = () => {
               className={`nav-links flex space-x-6 font-semibold ${menuToggle ? "active" : ""}`}
             >
               <li className="dropdown dropdown-7">
-                <a href="/" className="hover:text-primary text-sm tracking-wider duration-300 flex items-center gap-2">Home <FaAngleDown /></a>
-                <ul className="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                  <li><a href="#" className="dropdown_item-1">Sub-item 1</a></li>
-                  <li><a href="#" className="dropdown_item-1">Sub-item 2</a></li>
-                  <li><a href="#" className="dropdown_item-1">Sub-item 3</a></li>
-                </ul>
+                <a href="/" className="hover:text-primary text-sm tracking-wider duration-300 flex items-center gap-2">Home</a>
               </li>
               <li className="dropdown dropdown-7">
                 <a href="/course" className="hover:text-primary text-sm tracking-wider duration-300 flex items-center gap-2">Courses <FaAngleDown /></a>
                 <ul className="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                  <li><a href="#" className="dropdown_item-1">Sub-item 1</a></li>
-                  <li><a href="#" className="dropdown_item-1">Sub-item 2</a></li>
-                  <li><a href="#" className="dropdown_item-1">Sub-item 3</a></li>
+                  <li><a href="#" className="dropdown_item-1">Fundamental Modules</a></li>
+                  <li><a href="#" className="dropdown_item-1">Business Modules</a></li>
+                  <li><a href="#" className="dropdown_item-1">Web Designing Modules</a></li>
                 </ul>
               </li>
               <li className="dropdown dropdown-7">
@@ -75,12 +70,7 @@ const Header = () => {
               </li>
               <li className="dropdown dropdown-7">
                 {/* Contact Dropdown */}
-                <a href="/contact" className="hover:text-primary text-sm tracking-wider duration-300 flex items-center gap-2">Contact <FaAngleDown /></a>
-                <ul className="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                  <li><a href="#" className="dropdown_item-1">Sub-item 1</a></li>
-                  <li><a href="#" className="dropdown_item-1">Sub-item 2</a></li>
-                  <li><a href="#" className="dropdown_item-1">Sub-item 3</a></li>
-                </ul>
+                <a href="/contact" className="hover:text-primary text-sm tracking-wider duration-300 flex items-center gap-2">Contact</a>
               </li>
             </ul>
 

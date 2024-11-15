@@ -2,7 +2,7 @@ import sideimg from "../assets/imges/hero-img/hero-section01.png";
 import banner from "../assets/imges/banner/01.jpg";
 import { IoSearch } from "react-icons/io5";
 
-const subTitle = "Online education";
+const subTitle = "Online Tutorial";
 const title = (
   <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold font-sans text-[#314ea2]">
     <span className="d-lg-block">Learn The</span> Skills You Need{" "}
@@ -10,13 +10,13 @@ const title = (
   </h2>
 );
 const desc =
-  "Free online courses from the world’s Leading experts. Join 18+ million Learners today.";
+  "Free online tutorial from the world’s Leading experts. Join 18+ million Learners today.";
 
 const catagoryList = [
-  { name: "Figma", link: "#" },
-  { name: "Adobe XD", link: "#" },
-  { name: "Illustration", link: "#" },
-  { name: "Photoshop", link: "#" },
+  { name: "C++", link: "#" },
+  { name: "React. Js", link: "#" },
+  { name: "JavaScript", link: "#" },
+  { name: "Python", link: "#" },
 ];
 
 const Hero = () => {
@@ -33,7 +33,7 @@ const Hero = () => {
             <p className="desc text-sm md:text-lg text-gray-700 leading-6 py-3">{desc}</p>
             <form action="/" className="flex items-center py-3">
               <div className="relative flex items-center py-3 w-[150px] sm:w-[270px] md:w-[350px] lg:flex-grow">
-                <IoSearch className="absolute left-2 text-gray-500" />
+                <IoSearch className="absolute left-1 text-gray-500" />
                 <input
                   type="text"
                   placeholder="Keywords of your course"
@@ -42,7 +42,7 @@ const Hero = () => {
               </div>
               <button
                 type="submit"
-                className="bg-primary text-[10px] font-thin tracking-tighter px-2 py-[10px] md:px-4 md:py-5 text-white font-semibold tracking-wide"
+                className="bg-primary text-[10px] font-thin tracking-tighter px-2 py-[10px] md:px-4 md:py-5 md:text-[15px] text-white font-semibold tracking-wide"
               >
                 Search Course
               </button>
